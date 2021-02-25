@@ -70,31 +70,21 @@ function trim_text($input, $length, $ellipses = true, $strip_html = true) {
 /**
  * return an excerpt of a certain number of words
  */
-function get_the_limited_excerpt($limit) {
-  $excerpt = explode(' ', get_the_excerpt(), $limit);
-  if (count($excerpt)>=$limit) {
-    array_pop($excerpt);
-    $excerpt = implode(" ",$excerpt).'...';
-  } else {
-    $excerpt = implode(" ",$excerpt);
-  }
-  $excerpt = preg_replace('`[[^]]*]`','',$excerpt);
-  return $excerpt;
+function get_the_limited_excerpt( $limit = 35 ) {
+	$excerpt = get_the_excerpt();
+	$excerpt = wp_strip_all_tags( $excerpt );
+	$excerpt = wp_trim_words( $excerpt, $limit );
+
+	return $excerpt;
 }
 
 /**
  * return post content of a certain number of words
  */
-function get_the_limited_content($limit) {
-  $content = explode(' ', get_the_content(), $limit);
-  if (count($content)>=$limit) {
-    array_pop($content);
-    $content = implode(" ",$content).'...';
-  } else {
-    $content = implode(" ",$content);
-  }
-  $content = preg_replace('/[.+]/','', $content);
-  $content = apply_filters('the_content', $content);
-  $content = str_replace(']]>', ']]&gt;', $content);
-  return $content;
+function get_the_limited_content( $limit = 35 ) {
+	$content = apply_filters( 'the_content', get_the_content() );
+	$content = wp_strip_all_tags( $content );
+	$content = wp_trim_words( $content, $limit );
+
+	return $content;
 }
