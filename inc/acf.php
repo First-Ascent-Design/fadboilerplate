@@ -114,3 +114,56 @@ function get_palette_class($search_color, $is_background = false) {
         'has-' . $color_class . '-background-color':
         'has-' . $color_class . '-color';
 }
+
+/**
+ * Get all block fields from outside of the block loop.
+ *
+ * @param  string $block_id   Block ID, not to be conused with the attribute id
+ * @param  string $post_id    Post ID
+ * @return array|false
+ */
+function get_block_fields( $block_id = '', $post_id = '' ) {
+
+	if ( empty($block_id) ) return false;
+
+	// Get current post ID if post_id arg isn't passed
+	$post_id = $post_id ? $post_id : get_the_ID();
+
+	// Get the post object
+	$post = get_post( $post_id );
+
+	if ( has_blocks( $post->post_content ) ) {
+		$blocks = parse_blocks( $post->post_content );
+	    foreach ( $blocks as $block ) {
+		    if ( isset($block['attrs']['id']) && $block['attrs']['id'] === $block_id ) {
+		    	$content = $block['attrs']['data'];
+				return $content;
+		    }
+	    }
+	}
+
+	return false;
+}
+
+/**
+ * Get block field from outside of the block loop.
+ *
+ * @param  string $block_id   Block ID, not to be conused with the attribute id
+ * @param  string $field_name Field name from the block's field group
+ * @param  string $post_id    Post ID
+ * @return mixed|false
+ */
+function get_block_field( $block_id = '', $field_name = '', $post_id = '' ) {
+
+	if ( empty($block_id) || empty($field_name) ) return false;
+
+	// Get all fields.
+	$fields = get_block_fields( $block_id, $post_id );
+
+	if ( $fields && isset( $fields[$field_name] ) ) {
+	   $content = $fields[$field_name];
+	   return $content;
+	}
+
+	return false;
+}
