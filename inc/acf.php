@@ -122,7 +122,7 @@ function get_palette_class($search_color, $is_background = false) {
  * @param  string $post_id    Post ID
  * @return array|false
  */
-function get_block_fields( $block_id = '', $post_id = '' ) {
+function get_block_fields( $block_id, $post_id = '' ) {
 
 	if ( empty($block_id) ) return false;
 
@@ -153,7 +153,7 @@ function get_block_fields( $block_id = '', $post_id = '' ) {
  * @param  string $post_id    Post ID
  * @return mixed|false
  */
-function get_block_field( $block_id = '', $field_name = '', $post_id = '' ) {
+function get_block_field( $block_id, $field_name, $post_id = '' ) {
 
 	if ( empty($block_id) || empty($field_name) ) return false;
 
