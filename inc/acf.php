@@ -16,6 +16,18 @@ if( function_exists('acf_add_options_page') ) {
   ));
 }
 
+/**
+ * Sync ACF json
+ */
+add_filter('acf/settings/load_json', 'fadboilerplate_acf_json_load_point');
+function fadboilerplate_acf_json_load_point( $paths ) {
+
+    unset($paths[0]);
+    $paths[] = get_stylesheet_directory() . '/acf-json';
+
+    return $paths;
+}
+
 
 /**
  * Get the colors formatted for use with Iris, Automattic's color picker
