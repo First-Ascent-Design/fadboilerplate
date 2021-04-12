@@ -29,6 +29,7 @@ function register_acf_block_types() {
 	    'render_template'   => 'blocks/example/example-block.php',
 	    'icon'              => 'wordpress',
 	    'keywords'          => array( 'example' ),
+		'supports'          => array( 'anchor' => true ),
 		'example'           => array(
 			'attributes' => array(
 				'mode' => 'preview',
