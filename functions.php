@@ -1,10 +1,10 @@
 <?php
 /**
- * fadboilerplate functions and definitions
+ * devchallenge functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package fadboilerplate
+ * @package devchallenge
  */
 
 if ( ! defined( '_S_VERSION' ) ) {

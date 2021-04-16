@@ -8,39 +8,39 @@
  *
  * @link https://developer.wordpress.org/themes/functionality/custom-headers/
  *
- * @package fadboilerplate
+ * @package devchallenge
  */
 
 /**
  * Set up the WordPress core custom header feature.
  *
- * @uses fadboilerplate_header_style()
+ * @uses devchallenge_header_style()
  */
-function fadboilerplate_custom_header_setup() {
+function devchallenge_custom_header_setup() {
 	add_theme_support(
 		'custom-header',
 		apply_filters(
-			'fadboilerplate_custom_header_args',
+			'devchallenge_custom_header_args',
 			array(
 				'default-image'      => '',
 				'default-text-color' => '000000',
 				'width'              => 1000,
 				'height'             => 250,
 				'flex-height'        => true,
-				'wp-head-callback'   => 'fadboilerplate_header_style',
+				'wp-head-callback'   => 'devchallenge_header_style',
 			)
 		)
 	);
 }
-add_action( 'after_setup_theme', 'fadboilerplate_custom_header_setup' );
+add_action( 'after_setup_theme', 'devchallenge_custom_header_setup' );
 
-if ( ! function_exists( 'fadboilerplate_header_style' ) ) :
+if ( ! function_exists( 'devchallenge_header_style' ) ) :
 	/**
 	 * Styles the header image and text displayed on the blog.
 	 *
-	 * @see fadboilerplate_custom_header_setup().
+	 * @see devchallenge_custom_header_setup().
 	 */
-	function fadboilerplate_header_style() {
+	function devchallenge_header_style() {
 		$header_text_color = get_header_textcolor();
 
 		/*

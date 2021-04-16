@@ -1,6 +1,6 @@
 <?php
 /**
- * fadboilerplate filters
+ * devchallenge filters
  *
  * Many filters are off by default but are included here for ease of access
  */
