@@ -1,0 +1,15 @@
+/**
+ * Example Block
+ * Styles for custom Gutenerg blocks.
+ * Mobile first styling means that default styles are for the xs size
+ *   and overrides are for larger sizes.
+ */
+
+.block-recent-posts {
+  &__container {
+    
+  }
+
+  @include media-breakpoint-up(md) {
+  }
+}

@@ -40,6 +40,21 @@ function register_acf_block_types() {
 			)
 		)
 	));
+	acf_register_block_type(array(
+	    'name'              => 'recent-posts',
+	    'title'             => __('recent-posts'),
+	    'category'          => 'devchallenge-blocks',
+	    'description'       => __('Recent-posts Block'),
+	    'render_template'   => 'blocks/recent-posts/recent-posts-block.php',
+	    'icon'              => 'wordpress',
+	    'keywords'          => array( 'example' ),
+		'supports'          => array( 'anchor' => true ),
+		'example'           => array(
+			'attributes' => array(
+				'mode' => 'preview',
+			)
+		)
+	));
 }
 
 // Check if function exists and hook into setup.
