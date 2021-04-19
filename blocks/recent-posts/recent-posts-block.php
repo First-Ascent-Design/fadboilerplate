@@ -71,18 +71,21 @@ else :
 
 			<?php if ( $the_query->have_posts() ) : ?>
 				<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-					<div class="block-recent-posts__container__elements-list__element">
+					<div class="element">
+						<div class="element__title">
+								<h3 class=""><?php the_title(); ?></h3>
+							</div>
 
-						<div class="block-recent-posts__container__elements-list__element__thumbnail">
-							<?php the_post_thumbnail(); ?>
+						<div class="element__content">
+							<div class="element__content__thumbnail">
+								<?php the_post_thumbnail(); ?>
+							</div>
+							<div class="element__content__text">
+								<?php the_excerpt(); ?>
+							</div>
 						</div>
 
-						<div class="block-recent-posts__container__elements-list__element__title">
-							<p class=""><?php the_title(); ?></p>
-						</div>
-
-						<div class="block-recent-posts__container__elements-list__element__content">
-							<?php the_excerpt(); ?>
+						<div class="element__link">
 							<a href="<?php the_permalink( ); ?>" class="">Learn More</a>
 						</div>
 
