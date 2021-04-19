@@ -7,7 +7,7 @@
 
 .btn,
 .main-navigation .navbar-toggler:focus,
-.main-navigation .navbar-toggler:hover{
+.main-navigation .navbar-toggler:hover {
 	background-color: white;
 	border: white;
 }
@@ -49,10 +49,9 @@
 
 					&__thumbnail {
 						width: 100%;
-						margin-bottom:
-							1rem
+						margin-bottom: 1rem;
 
-							img							{
+						img {
 							margin: 0 auto;
 							border-radius: 4px;
 						}
