@@ -6,7 +6,7 @@
  * @param   string $content The block inner HTML (empty).
  * @param   bool $is_preview True during AJAX preview.
  * @param   (int|string) $post_id The post ID this block is saved to.
- * @package fadboilerplate
+ * @package devchallenge
  */
 
 // Create id attribute allowing for custom "anchor" value.
@@ -26,6 +26,9 @@ if( !empty($block['align']) ) {
 
 // Get ACF fields.
 $content = get_field( 'content' );
+$post = get_field( 'post' );
+$post2 = get_field( 'post2' );
+
 
 // Display Preview
 if (isset($block['data']['is_preview']) && $block['data']['is_preview'] == true) :
@@ -40,6 +43,8 @@ else :
         <h1>Example Block</h1>
 		<div class="block-example__text-container">
             <p><?php echo esc_html( $content ); ?></p>
+            <p><?php echo esc_html( $post ); ?></p>
+            <p><?php echo esc_html( $post2 ); ?></p>
 		</div>
 	</div>
 </section>

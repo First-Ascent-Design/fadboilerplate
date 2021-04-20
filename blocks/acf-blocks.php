@@ -6,8 +6,8 @@ function my_block_category( $categories, $post ) {
 	return array_merge(
 		array(
 			array(
-				'slug' => 'fadboilerplate-blocks',
-				'title' => __( 'fadboilerplate Blocks', 'fadboilerplate-blocks' ),
+				'slug' => 'devchallenge-blocks',
+				'title' => __( 'devchallenge Blocks', 'devchallenge-blocks' ),
 				'icon'  => 'wordpress',
 			),
 		), $categories
@@ -24,7 +24,7 @@ function register_acf_block_types() {
 	acf_register_block_type(array(
 	    'name'              => 'example',
 	    'title'             => __('Example'),
-	    'category'          => 'fadboilerplate-blocks',
+	    'category'          => 'devchallenge-blocks',
 	    'description'       => __('Example Block'),
 	    'render_template'   => 'blocks/example/example-block.php',
 	    'icon'              => 'wordpress',
@@ -37,6 +37,21 @@ function register_acf_block_types() {
 					'preview_image'   => get_stylesheet_directory_uri() . "/blocks/example/example-block_preview-image.png",
 					'is_preview'    => true
 				)
+			)
+		)
+	));
+	acf_register_block_type(array(
+	    'name'              => 'recent-posts',
+	    'title'             => __('recent-posts'),
+	    'category'          => 'devchallenge-blocks',
+	    'description'       => __('Recent-posts Block'),
+	    'render_template'   => 'blocks/recent-posts/recent-posts-block.php',
+	    'icon'              => 'wordpress',
+	    'keywords'          => array( 'example' ),
+		'supports'          => array( 'anchor' => true ),
+		'example'           => array(
+			'attributes' => array(
+				'mode' => 'preview',
 			)
 		)
 	));

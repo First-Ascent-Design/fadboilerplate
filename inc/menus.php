@@ -2,10 +2,10 @@
 /**
  * Functions which declare theme support for WordPress
  *
- * @package fadboilerplate
+ * @package devchallenge
  */
 
-if ( ! function_exists( 'fadboilerplate_setupmenus' ) ) :
+if ( ! function_exists( 'devchallenge_setupmenus' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
 	 *
@@ -13,15 +13,15 @@ if ( ! function_exists( 'fadboilerplate_setupmenus' ) ) :
 	 * runs before the init hook. The init hook is too late for some features, such
 	 * as indicating support for post thumbnails.
 	 */
-	function fadboilerplate_setupmenus() {
+	function devchallenge_setupmenus() {
 
 		register_nav_menus(
 			array(
-				'primary' => esc_html__( 'Primary Menu', 'fadboilerplate' ),
-				'footer'  => esc_html__( 'Footer Menu', 'fadboilerplate' ),
+				'primary' => esc_html__( 'Primary Menu', 'devchallenge' ),
+				'footer'  => esc_html__( 'Footer Menu', 'devchallenge' ),
 			)
 		);
 	}
 
 endif;
-add_action( 'after_setup_theme', 'fadboilerplate_setupmenus' );
+add_action( 'after_setup_theme', 'devchallenge_setupmenus' );

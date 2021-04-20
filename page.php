@@ -9,7 +9,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package fadboilerplate
+ * @package devchallenge
  */
 
 get_header();

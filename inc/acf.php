@@ -19,8 +19,8 @@ if( function_exists('acf_add_options_page') ) {
 /**
  * Sync ACF json
  */
-add_filter('acf/settings/load_json', 'fadboilerplate_acf_json_load_point');
-function fadboilerplate_acf_json_load_point( $paths ) {
+add_filter('acf/settings/load_json', 'devchallenge_acf_json_load_point');
+function devchallenge_acf_json_load_point( $paths ) {
 
     unset($paths[0]);
     $paths[] = get_stylesheet_directory() . '/acf-json';

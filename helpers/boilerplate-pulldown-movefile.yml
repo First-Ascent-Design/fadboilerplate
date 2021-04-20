@@ -14,17 +14,17 @@ local:
     mysqldump_options: "--add-drop-table --ignore-table={DB_NAME}.wp_wfVulnScanners --ignore-table={DB_NAME}.wp_wfThrottleLog --ignore-table={DB_NAME}.wp_wfStatus --ignore-table={DB_NAME}.wp_wfSNIPCache --ignore-table={DB_NAME}.wp_wfScanners --ignore-table={DB_NAME}.wp_wfReverseCache --ignore-table={DB_NAME}.wp_wfNet404s --ignore-table={DB_NAME}.wp_wfLogins --ignore-table={DB_NAME}.wp_wfLocs --ignore-table={DB_NAME}.wp_wfLockedOut --ignore-table={DB_NAME}.wp_wfLeechers --ignore-table={DB_NAME}.wp_wfKnownFileList --ignore-table={DB_NAME}.wp_wfIssues --ignore-table={DB_NAME}.wp_wfHoover --ignore-table={DB_NAME}.wp_wfHits --ignore-table={DB_NAME}.wp_wfFileMods --ignore-table={DB_NAME}.wp_wfCrawlers --ignore-table={DB_NAME}.wp_wfConfig --ignore-table={DB_NAME}.wp_wfBlocksAdv --ignore-table={DB_NAME}.wp_wfBlocks --ignore-table={DB_NAME}.wp_wfBlockedIPLog --ignore-table={DB_NAME}.wp_wfBadLeechers"
 
 staging:
-  vhost: "http://firstascentstaging.com/fadboilerplate"
-  wordpress_path: "/var/www/firstascentstaging.com/public_html/fadboilerplate" # use an absolute path here
+  vhost: "http://firstascentstaging.com/devchallenge"
+  wordpress_path: "/var/www/firstascentstaging.com/public_html/devchallenge" # use an absolute path here
 
   database:
-    name: "fadboilerplate"
-    user: "fadboilerplate"
-    password: "fadboilerplate"
+    name: "devchallenge"
+    user: "devchallenge"
+    password: "devchallenge"
     host: "localhost"
     # port: "3308" # Use just in case you have exotic server config
     # mysqldump_options: "--max_allowed_packet=1G" # Only available if using SSH
-    mysqldump_options: "--add-drop-table --ignore-table=fadboilerplate.wp_wfVulnScanners --ignore-table=fadboilerplate.wp_wfThrottleLog --ignore-table=fadboilerplate.wp_wfStatus --ignore-table=fadboilerplate.wp_wfSNIPCache --ignore-table=fadboilerplate.wp_wfScanners --ignore-table=fadboilerplate.wp_wfReverseCache --ignore-table=fadboilerplate.wp_wfNet404s --ignore-table=fadboilerplate.wp_wfLogins --ignore-table=fadboilerplate.wp_wfLocs --ignore-table=fadboilerplate.wp_wfLockedOut --ignore-table=fadboilerplate.wp_wfLeechers --ignore-table=fadboilerplate.wp_wfKnownFileList --ignore-table=fadboilerplate.wp_wfIssues --ignore-table=fadboilerplate.wp_wfHoover --ignore-table=fadboilerplate.wp_wfHits --ignore-table=fadboilerplate.wp_wfFileMods --ignore-table=fadboilerplate.wp_wfCrawlers --ignore-table=fadboilerplate.wp_wfConfig --ignore-table=fadboilerplate.wp_wfBlocksAdv --ignore-table=fadboilerplate.wp_wfBlocks --ignore-table=fadboilerplate.wp_wfBlockedIPLog --ignore-table=fadboilerplate.wp_wfBadLeechers"
+    mysqldump_options: "--add-drop-table --ignore-table=devchallenge.wp_wfVulnScanners --ignore-table=devchallenge.wp_wfThrottleLog --ignore-table=devchallenge.wp_wfStatus --ignore-table=devchallenge.wp_wfSNIPCache --ignore-table=devchallenge.wp_wfScanners --ignore-table=devchallenge.wp_wfReverseCache --ignore-table=devchallenge.wp_wfNet404s --ignore-table=devchallenge.wp_wfLogins --ignore-table=devchallenge.wp_wfLocs --ignore-table=devchallenge.wp_wfLockedOut --ignore-table=devchallenge.wp_wfLeechers --ignore-table=devchallenge.wp_wfKnownFileList --ignore-table=devchallenge.wp_wfIssues --ignore-table=devchallenge.wp_wfHoover --ignore-table=devchallenge.wp_wfHits --ignore-table=devchallenge.wp_wfFileMods --ignore-table=devchallenge.wp_wfCrawlers --ignore-table=devchallenge.wp_wfConfig --ignore-table=devchallenge.wp_wfBlocksAdv --ignore-table=devchallenge.wp_wfBlocks --ignore-table=devchallenge.wp_wfBlockedIPLog --ignore-table=devchallenge.wp_wfBadLeechers"
 
   exclude:
     - ".tags"
